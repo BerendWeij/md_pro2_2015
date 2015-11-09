@@ -1,14 +1,14 @@
 window.addEventListener("load", function(){
 
-    /** we halen het HTML element op waar we iets mee willen doen */
-    var notificationBar = document.querySelector(".notification-bar");
+    /** we maken de notificationBar aan, gekoppeld aan het HTML element */
+    var notificationBar = new NotificationBar(".notification-bar");
 
-    /** we luisteren of er op de webpagina wordt geklikt */
-    document.addEventListener("click", toggleNotificationBar);
+    /** we laten een begin notificatie zien */
+    notificationBar.showMessage("Welkom op deze pagina");
 
-    /** als er op de pagina wordt geklikt: toggle de class enabled */
-    function toggleNotificationBar(){
-        notificationBar.classList.toggle("enabled");
-    }
+    /** we checken of je op de pagina klikt */
+    document.addEventListener("click", function(){
+        notificationBar.showMessage("je hebt geklikt");
+    });
 
 });
