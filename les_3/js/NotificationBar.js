@@ -11,6 +11,7 @@ function NotificationBar(htmlElementID, showTime){
     /** we stellen in hoelang een bar zichtbaar blijft. Als je niets door hebt gegeven: 3 seconden */
     this.showTime = showTime || 3000;
 
+    /** we slaan alle css classes even op in een variabele */
     this.baseClasses = this.notificationBar.className;
 }
 
