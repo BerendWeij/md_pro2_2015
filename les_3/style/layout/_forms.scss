@@ -1,0 +1,49 @@
+input {
+    @extend .border-box;
+
+    width:100%;
+    border:0px;
+    padding:0px 0px 0px 4px;
+    margin:0px;
+    height:20px;
+    background:$green-lightest;
+
+}
+
+textarea {
+    @extend input;
+
+    height:150px;
+    padding-top: 4px;
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+.checkbox {
+    @extend .clickable;
+
+    padding-left: 25px !important;
+
+    &:before {
+        content: '';
+        position: absolute;
+        margin-left: -16px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $green-light;
+        background: $green-light;
+        margin-top: 2px;
+
+    }
+
+    &.checked {
+        &:before {
+            background:$blue;
+        }
+    }
+}
+
+.disabled {
+    opacity: 0.3;
+    pointer-events:none;
+}
