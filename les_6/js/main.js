@@ -55,6 +55,13 @@ window.addEventListener("load", function(){
         console.log("qr code is gescanned");
     });
 
+    // ** onderstaande code moet weg uit main.js ... maar is alleen een voorbeeld voor het HttpRequest object */
+    // ** als voorbeeld laad ik een test json file en laat zien wat hij teruggeeft */
+    var httpRequest = new HttpRequest();
+    httpRequest.load("http://ip.jsontest.com/", function(data){
+       console.log(data);
+    });
+
 
     /** we maken een nieuw object aan waar alle logica inzit voor de notificatie balk */
     var notificationBar = new NotificationBar(".notification-bar");
